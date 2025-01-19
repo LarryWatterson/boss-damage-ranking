@@ -1,0 +1,9 @@
+// find
+
+    HEADER_GC_RESPOND_CHANNELSTATUS = 210,
+
+// add below
+
+#ifdef BOSS_DAMAGE_RANKING_PLUGIN
+    HEADER_GC_BOSS_DMG_RANKING = 241,
+#endif
