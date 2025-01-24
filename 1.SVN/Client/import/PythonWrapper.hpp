@@ -179,9 +179,9 @@ class PythonObjectBuilder {
      *
      * @param value Value to add
      */
-    PythonObjectBuilder& add_item(const value_type_t& value)
+    PythonObjectBuilder& add_item(value_type_t value)
     {
-        m_values.emplace_back(value);
+        m_values.emplace_back(std::move(value));
 
         return *this;
     }
