@@ -25,6 +25,12 @@
 
 // add above
 
+struct DynamicPacketInfo
+{
+    uint8_t header;
+    uint8_t sub_header;
+};
+
 #ifdef BOSS_DAMAGE_RANKING_PLUGIN
 enum class EPacketCGBossDamageRankingSubHeaderType : uint8_t
 {
