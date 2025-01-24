@@ -10,6 +10,12 @@
 
 // add anywhere
 
+struct DynamicPacketInfo
+{
+    uint8_t header;
+    uint8_t sub_header;
+};
+
 #ifdef BOSS_DAMAGE_RANKING_PLUGIN
 enum class BadAffectType : uint8_t {
     NONE = 0 << 0,
@@ -23,12 +29,6 @@ enum class BadAffectType : uint8_t {
 enum class EPacketCGBossDamageRankingSubHeaderType : uint8_t {
     BOSS_DMG_RANKING_RANK_INFO,
     BOSS_DMG_RANKING_DAMAGE_INFO,
-};
-
-struct SPacketCGBossDamageRanking
-{
-    SPacketCGBossDamageRanking() : header(HEADER_GC_BOSS_DMG_RANKING) {}
-    uint8_t header;
 };
 
 struct SPacketGCRankingGeneralInfo
