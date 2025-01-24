@@ -162,12 +162,12 @@ void CBossDamageRankingManager::damage_process(
 
     if (!validation_result.has_value()) { return; }
 
-    auto* boss_info = validation_result->first;
-    auto* player_data = validation_result->second;
+    auto* boss_info{validation_result->first};
+    auto* player_data{validation_result->second};
 
     ensure_player_in_ranking(player_data, p_character);
 
-    const auto player_id = p_character->GetPlayerID();
+    const auto player_id{p_character->GetPlayerID()};
     player_data->add_damage(player_id, damage);
 
     player_data->set_player_info_damage_percent(boss_info->get_boss_info()->max_hp);
